@@ -1,36 +1,3 @@
-# flutter_navigation_drrawer
-
-A new Flutter project.
-
-## Getting Started
-
-### Main.Dart
-```
-import 'package:flutter/material.dart';
-import 'package:flutter_navigation_drrawer/home_screen.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Navigation Drawer',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomeScreem(),
-    );
-  }
-}
-```
-
-### Home Screem
-```
 import 'package:flutter/material.dart';
 import 'package:flutter_navigation_drrawer/screen_two.dart' show ScreenTwo;
 
@@ -97,42 +64,3 @@ class HomeScreem extends StatelessWidget {
     );
   }
 }
-```
-
-### Second Screen
-```
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const ScreenTwo());
-}
-
-class ScreenTwo extends StatefulWidget {
-  const ScreenTwo({super.key});
-
-  @override
-  State<ScreenTwo> createState() => _ScreenTwoState();
-}
-
-class _ScreenTwoState extends State<ScreenTwo> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Screen Two'),
-          backgroundColor: Colors.teal,
-        ),
-        body: Center(
-          child: TextButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text('Back to Home Screen'),
-          ),
-        ),
-      ),
-    );
-  }
-}
-```
